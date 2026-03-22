@@ -1,0 +1,76 @@
+/* ====== MAIN CONTENT WRAPPER ====== */
+.content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ====== BOTTOM LINKS ====== */
+.bottom-links {
+  margin-top: 80px;
+  display: flex;
+  gap: 40px;
+  animation: fadeInUp 1s ease 2.8s both;
+}
+
+.bottom-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.bottom-links a:hover { color: var(--text-primary); }
+
+.bottom-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cyan);
+  transition: width 0.3s ease;
+}
+
+.bottom-links a:hover::after { width: 100%; }
+
+/* ====== STATUS BAR ====== */
+.status-bar {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: fadeInUp 1s ease 3.2s both;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

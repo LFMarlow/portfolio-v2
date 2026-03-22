@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber & Infrastructure — Thomas Lesage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/variables.css">
+  <link rel="stylesheet" href="Styles/base.css">
+  <link rel="stylesheet" href="Styles/overlays.css">
+  <link rel="stylesheet" href="Styles/Cyber/hero.css">
+  <link rel="stylesheet" href="Styles/Cyber/architecture.css">
+  <link rel="stylesheet" href="Styles/Cyber/projects.css">
+  <link rel="stylesheet" href="Styles/Cyber/stack.css">
+  <link rel="stylesheet" href="Styles/Cyber/timeline.css">
+  <link rel="stylesheet" href="Styles/Cyber/nav.css">
+  <link rel="stylesheet" href="Styles/Cyber/responsive.css">
+</head>
+<body>
+
+  <!-- OVERLAYS -->
+  <div class="noise-overlay"></div>
+  <div class="scanlines"></div>
+
+  <!-- TOP NAV -->
+  <nav class="cyber-nav">
+    <a href="index.html" class="nav-back">
+      <span class="nav-arrow">&larr;</span>
+      <span>Hub</span>
+    </a>
+    <div class="nav-title">
+      <span class="nav-dot"></span>
+      Cyber &amp; Infrastructure
+    </div>
+    <a href="dev.html" class="nav-next">
+      <span>Dev &amp; Web</span>
+      <span class="nav-arrow">&rarr;</span>
+    </a>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="cyber-hero">
+    <div class="cyber-hero__badge">Entrée 01</div>
+    <h1 class="cyber-hero__title">Cyber &amp;<br>Infrastructure</h1>
+    <p class="cyber-hero__subtitle">
+      Architecture réseau segmentée, SIEM, hardening, automatisation &mdash;
+      un lab virtualisé complet construit de zéro sur bare-metal OVH.
+    </p>
+    <div class="cyber-hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== ARCHITECTURE LAB ====== -->
+  <section class="section" id="architecture">
+    <div class="section__header">
+      <span class="section__number">01</span>
+      <h2 class="section__title">Architecture Lab</h2>
+      <p class="section__desc">Infrastructure virtualisée sur Proxmox &mdash; VLAN segmenté, 16+ VMs, monitoring complet.</p>
+    </div>
+
+    <div class="arch-container">
+      <!-- Tooltip (populated by JS on hover/click) -->
+      <div class="arch-tooltip" id="arch-tooltip">
+        <div class="arch-tooltip__name"></div>
+        <div class="arch-tooltip__detail"></div>
+      </div>
+
+      <!-- Empty container: SVG generated entirely by architecture.js -->
+      <div id="arch-diagram"></div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ====== -->
+  <section class="section" id="projects">
+    <div class="section__header">
+      <span class="section__number">02</span>
+      <h2 class="section__title">Projets &amp; Réalisations</h2>
+      <p class="section__desc">Les blocs techniques majeurs déployés dans le lab.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card" data-accent="orange">
+        <div class="project-card__number">01</div>
+        <h3 class="project-card__title">Wazuh / SIEM</h3>
+        <p class="project-card__desc">Déploiement d'un SIEM centralisé avec Wazuh Manager et agents OSSEC sur l'ensemble des VMs. Corrélation d'événements, détection d'intrusions en temps réel. Couplé à Suricata pour l'analyse réseau IDS/IPS.</p>
+        <div class="project-card__tags"><span>Wazuh</span><span>OSSEC</span><span>Suricata</span><span>ELK</span></div>
+        <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
+      </article>
+
+      <article class="project-card" data-accent="purple">
+        <div class="project-card__number">02</div>
+        <h3 class="project-card__title">Terraform Automation</h3>
+        <p class="project-card__desc">Provisioning automatisé de VMs LAMP via Terraform &mdash; full clone depuis template Debian (ID 9000), nommage dynamique, configuration Nginx upstream auto sur le reverse proxy. Versionné sur GitHub.</p>
+        <div class="project-card__tags"><span>Terraform</span><span>Proxmox API</span><span>Nginx</span><span>Git</span></div>
+        <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
+      </article>
+
+      <article class="project-card" data-accent="green">
+        <div class="project-card__number">03</div>
+        <h3 class="project-card__title">Bastion Guacamole</h3>
+        <p class="project-card__desc">Point d'accès unique via Apache Guacamole (VM 110). Compilation custom sur Debian 13, Tomcat 9, Eclipse Temurin JDK 17, MariaDB backend. Résolution du bug proxy_hostname/proxy_port.</p>
+        <div class="project-card__tags"><span>Guacamole</span><span>Tomcat 9</span><span>SSH</span><span>RDP</span></div>
+        <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
+      </article>
+
+      <article class="project-card" data-accent="cyan">
+        <div class="project-card__number">04</div>
+        <h3 class="project-card__title">Hardening Lynis</h3>
+        <p class="project-card__desc">Score Lynis de 65 &rarr; 82 sur le bastion. SSH hardening, auditd, rkhunter, fail2ban, libpam-pwquality, paramètres sysctl sécurisés, mot de passe GRUB, politiques de mots de passe.</p>
+        <div class="project-card__tags"><span>Lynis</span><span>fail2ban</span><span>auditd</span><span>sysctl</span></div>
+        <div class="project-card__status"><span class="status-indicator status-indicator--complete"></span> Score 82/100</div>
+      </article>
+
+      <article class="project-card" data-accent="cyan">
+        <div class="project-card__number">05</div>
+        <h3 class="project-card__title">Reverse Proxy &amp; DMZ</h3>
+        <p class="project-card__desc">Nginx en reverse proxy sur la DMZ, TLS termination, config upstream dynamique générée par Terraform. Segmentation réseau stricte entre VLANs via pfSense.</p>
+        <div class="project-card__tags"><span>Nginx</span><span>TLS</span><span>pfSense</span><span>VLAN</span></div>
+        <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== STACK ====== -->
+  <section class="section" id="stack">
+    <div class="section__header">
+      <span class="section__number">03</span>
+      <h2 class="section__title">Stack Technique</h2>
+      <p class="section__desc">Compétences par domaine &mdash; pas de barres de progression, que du concret.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 class="stack-category__title">Virtualisation</h3>
+        <div class="stack-category__items"><span>Proxmox VE</span><span>QEMU/KVM</span><span>LXC</span><span>VMware</span></div>
+      </div>
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3 class="stack-category__title">Réseau</h3>
+        <div class="stack-category__items"><span>pfSense</span><span>VLAN</span><span>TCP/IP</span><span>DNS</span><span>VPN</span></div>
+      </div>
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="stack-category__title">Sécurité / SIEM</h3>
+        <div class="stack-category__items"><span>Wazuh</span><span>OSSEC</span><span>Suricata</span><span>Lynis</span><span>fail2ban</span><span>rkhunter</span></div>
+      </div>
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3 class="stack-category__title">Automatisation</h3>
+        <div class="stack-category__items"><span>Terraform</span><span>Bash</span><span>Git</span><span>CI/CD</span></div>
+      </div>
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3 class="stack-category__title">Monitoring</h3>
+        <div class="stack-category__items"><span>Zabbix</span><span>GLPI</span><span>Grafana</span></div>
+      </div>
+      <div class="stack-category">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <h3 class="stack-category__title">Bases de données</h3>
+        <div class="stack-category__items"><span>MariaDB</span><span>MySQL</span><span>Réplication M/S</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TIMELINE ====== -->
+  <section class="section" id="timeline">
+    <div class="section__header">
+      <span class="section__number">04</span>
+      <h2 class="section__title">Chronologie</h2>
+      <p class="section__desc">Progression du projet infrastructure EPSI.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__line"></div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">Phase 1</div>
+        <div class="timeline__content">
+          <h3>Fondations</h3>
+          <p>Mise en place du node Proxmox sur bare-metal OVH, configuration des VLANs (CORE, SERVER, DMZ/ADMIN, LAN), déploiement de pfSense comme gateway centrale.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">Phase 2</div>
+        <div class="timeline__content">
+          <h3>Services Core</h3>
+          <p>Déploiement MariaDB master/slave, serveurs LAMP, Nginx reverse proxy. Mise en place de la segmentation réseau inter-VLAN.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">Phase 3</div>
+        <div class="timeline__content">
+          <h3>Sécurité &amp; Monitoring</h3>
+          <p>Installation Wazuh SIEM + agents OSSEC, Suricata IDS/IPS, Zabbix monitoring, GLPI gestion de parc. Couverture complète de l'infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">Phase 4</div>
+        <div class="timeline__content">
+          <h3>Bastion &amp; Hardening</h3>
+          <p>Apache Guacamole comme bastion SSH/RDP centralisé. Hardening Lynis (65&rarr;82), auditd, fail2ban, politiques SSH, snapshots systématiques.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__date">Phase 5</div>
+        <div class="timeline__content">
+          <h3>Automatisation</h3>
+          <p>Terraform pour le provisioning automatisé des VMs LAMP, configuration Nginx dynamique, versioning Git/GitHub. Documentation complète.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="cyber-footer">
+    <a href="index.html" class="footer-link">&larr; Retour au Hub</a>
+    <a href="dev.html" class="footer-link">Développement &amp; Web &rarr;</a>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="Scripts/architecture.js"></script>
+  <script src="Scripts/scroll-reveal.js"></script>
+</body>
+</html>

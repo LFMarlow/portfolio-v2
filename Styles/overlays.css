@@ -1,0 +1,61 @@
+/* ====== NOISE OVERLAY ====== */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ====== SCANLINES ====== */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* ====== GRID FLOOR ====== */
+.grid-floor {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) perspective(500px) rotateX(60deg);
+  width: 200vw;
+  height: 60vh;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
+  animation: gridScroll 8s linear infinite;
+}
+
+@keyframes gridScroll {
+  to { background-position: 0 60px; }
+}
+
+/* ====== CORNER DECORATIONS ====== */
+.corner {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.corner--tl { top: 20px; left: 20px; border-top: 1px solid var(--cyan-dim); border-left: 1px solid var(--cyan-dim); }
+.corner--tr { top: 20px; right: 20px; border-top: 1px solid var(--cyan-dim); border-right: 1px solid var(--cyan-dim); }
+.corner--bl { bottom: 20px; left: 20px; border-bottom: 1px solid var(--cyan-dim); border-left: 1px solid var(--cyan-dim); }
+.corner--br { bottom: 20px; right: 20px; border-bottom: 1px solid var(--cyan-dim); border-right: 1px solid var(--cyan-dim); }

@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+  .portals { gap: 30px; }
+
+  .portal {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 24px;
+  }
+
+  .bottom-links {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .corner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .status-bar {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .portal-title {
+    font-size: 18px;
+  }
+
+  .portal-stack span {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}

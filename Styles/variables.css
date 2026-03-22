@@ -1,0 +1,23 @@
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0d0d14;
+
+  --cyan: #00f0ff;
+  --cyan-dim: #00f0ff33;
+  --cyan-glow: #00f0ff88;
+
+  --magenta: #ff00aa;
+  --magenta-dim: #ff00aa33;
+  --magenta-glow: #ff00aa88;
+
+  --green: #00ff88;
+  --green-dim: #00ff8833;
+
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888aa;
+  --text-dim: #555577;
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+}

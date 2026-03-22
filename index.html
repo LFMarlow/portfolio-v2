@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas Lesage — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/variables.css">
+  <link rel="stylesheet" href="Styles/base.css">
+  <link rel="stylesheet" href="Styles/loader.css">
+  <link rel="stylesheet" href="Styles/overlays.css">
+  <link rel="stylesheet" href="Styles/header.css">
+  <link rel="stylesheet" href="Styles/portals.css">
+  <link rel="stylesheet" href="Styles/layout.css">
+  <link rel="stylesheet" href="Styles/responsive.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-text">Initialisation</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <canvas id="three-canvas"></canvas>
+
+  <div class="noise-overlay"></div>
+  <div class="scanlines"></div>
+  <div class="grid-floor"></div>
+  <div class="corner corner--tl"></div>
+  <div class="corner corner--tr"></div>
+  <div class="corner corner--bl"></div>
+  <div class="corner corner--br"></div>
+
+  <div class="content">
+    <header class="header">
+      <div class="tag">Portfolio 2026</div>
+      <h1>Thomas<br>Lesage</h1>
+      <div class="subtitle"><span>&gt;</span> Cybersécurité · DevOps · Développement</div>
+    </header>
+
+    <div class="portals">
+      <a href="cyber.html" class="portal portal--cyber">
+        <div class="portal-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4L6 12v12c0 11 8 18 18 22 10-4 18-11 18-22V12L24 4z"/>
+            <path d="M18 24l4 4 8-8"/>
+          </svg>
+        </div>
+        <div class="portal-label">Entrée 01</div>
+        <div class="portal-title">Cyber &<br>Infrastructure</div>
+        <p class="portal-desc">
+          Sécurité offensive & défensive, architecture réseau, SIEM, hardening, automatisation d'infrastructure.
+        </p>
+        <div class="portal-stack">
+          <span>Proxmox</span>
+          <span>pfSense</span>
+          <span>Wazuh</span>
+          <span>Terraform</span>
+          <span>Suricata</span>
+        </div>
+        <div class="portal-enter">
+          Explorer <span class="arrow">→</span>
+        </div>
+      </a>
+
+      <a href="#" class="portal portal--dev">
+        <div class="portal-icon">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="16 14 6 24 16 34"/>
+            <polyline points="32 14 42 24 32 34"/>
+            <line x1="28" y1="8" x2="20" y2="40"/>
+          </svg>
+        </div>
+        <div class="portal-label">Entrée 02</div>
+        <div class="portal-title">Développement<br>& Web</div>
+        <p class="portal-desc">
+          Applications web, APIs, interfaces interactives, architecture logicielle et intégration continue.
+        </p>
+        <div class="portal-stack">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>PHP</span>
+          <span>C#</span>
+          <span>ASP.NET</span>
+        </div>
+        <div class="portal-enter">
+          Explorer <span class="arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="bottom-links">
+      <a href="https://github.com/LFMarlow" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/thomas-lesage-147330116/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:thomas59.lesage@gmail.com">Contact</a>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-dot"></div>
+    <span>Système opérationnel — v2.0</span>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="Scripts/scene.js"></script>
+  <script src="Scripts/loader.js"></script>
+</body>
+</html>

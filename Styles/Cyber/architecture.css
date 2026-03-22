@@ -1,0 +1,106 @@
+/* ====== SECTION GENERIC ====== */
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section__header {
+  margin-bottom: 60px;
+}
+
+.section__number {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.section__desc {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ====== ARCHITECTURE DIAGRAM ====== */
+.arch-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 240, 255, 0.08);
+  border-radius: 3px;
+}
+
+#arch-diagram {
+  width: 100%;
+  min-width: 800px;
+  height: auto;
+  display: block;
+}
+
+.arch-node {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.arch-node:hover {
+  opacity: 1;
+}
+
+.arch-node:hover rect {
+  stroke-width: 2;
+  filter: url(#glow);
+}
+
+/* ====== TOOLTIP ====== */
+.arch-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 18px;
+  background: rgba(10, 10, 15, 0.95);
+  border: 1px solid var(--cyan);
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  max-width: 360px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+.arch-tooltip.visible {
+  opacity: 1;
+}
+
+.arch-tooltip__name {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  margin-bottom: 6px;
+}
+
+.arch-tooltip__detail {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}

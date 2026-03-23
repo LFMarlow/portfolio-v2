@@ -1,4 +1,4 @@
-/* ====== NOISE OVERLAY ====== */
+/* NOISE OVERLAY */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -9,7 +9,7 @@
   background-size: 256px 256px;
 }
 
-/* ====== SCANLINES ====== */
+/* SCANLINES */
 .scanlines {
   position: fixed;
   inset: 0;
@@ -24,7 +24,7 @@
   );
 }
 
-/* ====== GRID FLOOR ====== */
+/* GRID FLOOR */
 .grid-floor {
   position: fixed;
   bottom: 0;
@@ -46,7 +46,7 @@
   to { background-position: 0 60px; }
 }
 
-/* ====== CORNER DECORATIONS ====== */
+/* CORNER DECORATIONS */
 .corner {
   position: fixed;
   width: 60px;

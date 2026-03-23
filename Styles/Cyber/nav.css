@@ -1,4 +1,4 @@
-/* ====== TOP NAV ====== */
+/* TOP NAV */
 .cyber-nav {
   position: fixed;
   top: 0;
@@ -60,7 +60,7 @@
   box-shadow: 0 0 8px var(--cyan);
 }
 
-/* ====== FOOTER ====== */
+/* FOOTER */
 .cyber-footer {
   position: relative;
   z-index: 2;

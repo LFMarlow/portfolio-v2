@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber & Infrastructure — Thomas Lesage</title>
+  <title>Cyber & Infrastructure Thomas Lesage</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Styles/variables.css">
   <link rel="stylesheet" href="Styles/base.css">
@@ -18,11 +18,9 @@
 </head>
 <body>
 
-  <!-- OVERLAYS -->
   <div class="noise-overlay"></div>
   <div class="scanlines"></div>
 
-  <!-- TOP NAV -->
   <nav class="cyber-nav">
     <a href="index.html" class="nav-back">
       <span class="nav-arrow">&larr;</span>
@@ -38,7 +36,6 @@
     </a>
   </nav>
 
-  <!-- ====== HERO ====== -->
   <section class="cyber-hero">
     <div class="cyber-hero__badge">Entrée 01</div>
     <h1 class="cyber-hero__title">Cyber &amp;<br>Infrastructure</h1>
@@ -52,7 +49,6 @@
     </div>
   </section>
 
-  <!-- ====== ARCHITECTURE LAB ====== -->
   <section class="section" id="architecture">
     <div class="section__header">
       <span class="section__number">01</span>
@@ -61,18 +57,16 @@
     </div>
 
     <div class="arch-container">
-      <!-- Tooltip (populated by JS on hover/click) -->
+
       <div class="arch-tooltip" id="arch-tooltip">
         <div class="arch-tooltip__name"></div>
         <div class="arch-tooltip__detail"></div>
       </div>
 
-      <!-- Empty container: SVG generated entirely by architecture.js -->
       <div id="arch-diagram"></div>
     </div>
   </section>
 
-  <!-- ====== PROJECTS ====== -->
   <section class="section" id="projects">
     <div class="section__header">
       <span class="section__number">02</span>
@@ -123,7 +117,6 @@
     </div>
   </section>
 
-  <!-- ====== STACK ====== -->
   <section class="section" id="stack">
     <div class="section__header">
       <span class="section__number">03</span>
@@ -165,7 +158,6 @@
     </div>
   </section>
 
-  <!-- ====== TIMELINE ====== -->
   <section class="section" id="timeline">
     <div class="section__header">
       <span class="section__number">04</span>
@@ -223,13 +215,11 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="cyber-footer">
     <a href="index.html" class="footer-link">&larr; Retour au Hub</a>
     <a href="dev.html" class="footer-link">Développement &amp; Web &rarr;</a>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="Scripts/architecture.js"></script>
   <script src="Scripts/scroll-reveal.js"></script>
 </body>

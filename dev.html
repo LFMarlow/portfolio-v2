@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Développement & Web Thomas Lesage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/variables.css">
+  <link rel="stylesheet" href="Styles/base.css">
+  <link rel="stylesheet" href="Styles/overlays.css">
+  <link rel="stylesheet" href="Styles/sections.css">
+  <link rel="stylesheet" href="Styles/Dev/hero.css">
+  <link rel="stylesheet" href="Styles/Dev/projects.css">
+  <link rel="stylesheet" href="Styles/Dev/stack.css">
+  <link rel="stylesheet" href="Styles/Dev/approach.css">
+  <link rel="stylesheet" href="Styles/Dev/nav.css">
+  <link rel="stylesheet" href="Styles/Dev/responsive.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+  <div class="scanlines"></div>
+
+  <nav class="dev-nav">
+    <a href="index.html" class="nav-back">
+      <span class="nav-arrow">&larr;</span>
+      <span>Hub</span>
+    </a>
+    <div class="nav-title">
+      <span class="nav-dot"></span>
+      Développement &amp; Web
+    </div>
+    <a href="cyber.html" class="nav-next">
+      <span>Cyber &amp; Infra</span>
+      <span class="nav-arrow">&rarr;</span>
+    </a>
+  </nav>
+
+  <section class="dev-hero">
+    <div class="dev-hero__badge">Entrée 02</div>
+    <h1 class="dev-hero__title">Développement<br>&amp; Web</h1>
+    <p class="dev-hero__subtitle">
+      Applications web, game dev, interfaces interactives &mdash;
+      du code propre, structuré et versionné.
+    </p>
+    <div class="dev-hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section__header">
+      <span class="section__number">01</span>
+      <h2 class="section__title">Projets</h2>
+      <p class="section__desc">Du game dev au web, chaque projet est une occasion d'apprendre.</p>
+    </div>
+
+    <div class="dev-projects">
+
+      <article class="dev-project dev-project--featured" data-accent="magenta">
+        <div class="dev-project__visual">
+          <img src="Assets/Images/CoE.jpg" alt="Crown of Echoes">
+        </div>
+        <div class="dev-project__content">
+          <div class="dev-project__meta">
+            <span class="dev-project__number">01</span>
+            <span class="dev-project__status dev-project__status--wip">
+              <span class="status-dot"></span> En développement
+            </span>
+          </div>
+          <h3 class="dev-project__title">Crown of Echoes</h3>
+          <p class="dev-project__type">RPG Top-Down 2D &mdash; Alundra-Like</p>
+          <p class="dev-project__desc">
+            Projet personnel de jeu vidéo développé sur Unity. Un RPG Top-Down 2D
+            inspiré d'Alundra, mêlant exploration, combat en temps réel, puzzles
+            et narration. Systèmes de base fonctionnels : déplacement, combat,
+            dialogues PNJ, tilemap, caméra dynamique et cinématiques in-game
+            avec déplacements automatisés des personnages.
+          </p>
+          <div class="dev-project__features">
+            <div class="feature">
+              <span class="feature__icon">⚔</span>
+              <span>Système de combat temps réel</span>
+            </div>
+            <div class="feature">
+              <span class="feature__icon">💬</span>
+              <span>Dialogues & cinématiques in-game</span>
+            </div>
+            <div class="feature">
+              <span class="feature__icon">🗺</span>
+              <span>Tilemap & level design</span>
+            </div>
+            <div class="feature">
+              <span class="feature__icon">🎥</span>
+              <span>Caméra dynamique</span>
+            </div>
+          </div>
+          <div class="dev-project__tags">
+            <span>Unity</span><span>C#</span><span>2D</span><span>Tilemap</span><span>Cinemachine</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dev-project" data-accent="cyan">
+        <div class="dev-project__visual">
+          <img src="Assets/Images/Portfolio_v2.0.png" alt="PortFolio V2.0">
+        </div>
+        <div class="dev-project__content">
+          <div class="dev-project__meta">
+            <span class="dev-project__number">02</span>
+            <span class="dev-project__status dev-project__status--live">
+              <span class="status-dot"></span> En ligne
+            </span>
+          </div>
+          <h3 class="dev-project__title">Portfolio v2</h3>
+          <p class="dev-project__type">Site vitrine interactif</p>
+          <p class="dev-project__desc">
+            Ce portfolio. Scène 3D Three.js sur la landing page, schéma
+            d'architecture SVG généré dynamiquement avec interactivité
+            hover/clic, design system dark/futuriste, architecture multi-pages
+            séparée HTML/CSS/JS.
+          </p>
+          <div class="dev-project__tags">
+            <span>Three.js</span><span>SVG</span><span>JavaScript</span><span>CSS</span>
+          </div>
+          <a href="https://thomaslesage.netlify.app" class="dev-project__link" target="_blank" rel="noopener">
+            Voir en live <span>&rarr;</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="dev-project" data-accent="green">
+        <div class="dev-project__visual">
+          <img src="Assets/Images/quai_antique.png" alt="Quai Antique">
+        </div>
+        <div class="dev-project__content">
+          <div class="dev-project__meta">
+            <span class="dev-project__number">03</span>
+            <span class="dev-project__status dev-project__status--archived">
+              <span class="status-dot"></span> Archivé
+            </span>
+          </div>
+          <h3 class="dev-project__title">Quai Antique</h3>
+          <p class="dev-project__type">Application web de restauration (SPA)</p>
+          <p class="dev-project__desc">
+            Single Page Application pour un restaurant gastronomique.
+            Réservation en ligne, gestion des menus, interface responsive.
+            Projet réalisé dans le cadre de ma formation développement web.
+          </p>
+          <div class="dev-project__tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dev-project" data-accent="orange">
+        <div class="dev-project__visual">
+          <img src="Assets/Images/gamestore.png" alt="Gamestore">
+        </div>
+        <div class="dev-project__content">
+          <div class="dev-project__meta">
+            <span class="dev-project__number">04</span>
+            <span class="dev-project__status dev-project__status--archived">
+              <span class="status-dot"></span> Archivé
+            </span>
+          </div>
+          <h3 class="dev-project__title">Gamestore</h3>
+          <p class="dev-project__type">Application web e-commerce</p>
+          <p class="dev-project__desc">
+            Plateforme de vente de jeux vidéo développée en ASP.NET.
+            Double base de données MySQL et MongoDB, gestion des utilisateurs,
+            panier, catalogue produits. Projet de fin de formation.
+          </p>
+          <div class="dev-project__tags">
+            <span>ASP.NET</span><span>C#</span><span>MySQL</span><span>MongoDB</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section__header">
+      <span class="section__number">02</span>
+      <h2 class="section__title">Stack Technique</h2>
+      <p class="section__desc">Langages, frameworks et outils par domaine.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-category" data-accent="magenta">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3 class="stack-category__title">Frontend</h3>
+        <div class="stack-category__items"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Three.js</span></div>
+      </div>
+      <div class="stack-category" data-accent="cyan">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3 class="stack-category__title">Backend</h3>
+        <div class="stack-category__items"><span>PHP</span><span>Node.js</span><span>C#</span><span>ASP.NET</span><span>Java</span></div>
+      </div>
+      <div class="stack-category" data-accent="green">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h12l4 6-10 13L2 9z"/></svg></div>
+        <h3 class="stack-category__title">Game Dev</h3>
+        <div class="stack-category__items"><span>Unity</span><span>C#</span><span>Tilemap</span><span>Cinemachine</span><span>2D Toolkit</span></div>
+      </div>
+      <div class="stack-category" data-accent="orange">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <h3 class="stack-category__title">Bases de données</h3>
+        <div class="stack-category__items"><span>MySQL</span><span>MariaDB</span><span>MongoDB</span></div>
+      </div>
+      <div class="stack-category" data-accent="cyan">
+        <div class="stack-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3 class="stack-category__title">Outils</h3>
+        <div class="stack-category__items"><span>Git / GitHub</span><span>VS Code</span><span>Rider</span><span>Netlify</span><span>Figma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="approach">
+    <div class="section__header">
+      <span class="section__number">03</span>
+      <h2 class="section__title">Approche</h2>
+      <p class="section__desc">Ma philosophie de développement.</p>
+    </div>
+
+    <div class="approach-grid">
+      <div class="approach-card">
+        <div class="approach-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/>
+          </svg>
+        </div>
+        <h3 class="approach-card__title">Code propre</h3>
+        <p class="approach-card__desc">
+          Séparation des responsabilités, nommage explicite, architecture claire.
+          Un fichier = une responsabilité. Le code doit être lisible par quelqu'un
+          d'autre sans commentaires superflus.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <h3 class="approach-card__title">Itératif</h3>
+        <p class="approach-card__desc">
+          Avancer par petits incréments vérifiables. Tester, valider, commiter.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
+          </svg>
+        </div>
+        <h3 class="approach-card__title">Versionné</h3>
+        <p class="approach-card__desc">
+          Tout passe par Git. Commits, messages clairs, branches
+          pour les features. Le code est toujours traçable et récupérable.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <h3 class="approach-card__title">Documenté</h3>
+        <p class="approach-card__desc">
+          README structuré, documentation des procédures, retours d'expérience
+          sur les problèmes rencontrés.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="dev-footer">
+    <a href="index.html" class="footer-link">&larr; Retour au Hub</a>
+    <a href="cyber.html" class="footer-link">Cyber &amp; Infrastructure &rarr;</a>
+  </footer>
+
+  <script src="Scripts/scroll-reveal.js"></script>
+</body>
+</html>

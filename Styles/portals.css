@@ -11,7 +11,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== PORTAL BASE ====== */
+/* PORTAL BASE */
 .portal {
   position: relative;
   width: 320px;
@@ -69,7 +69,7 @@
   box-shadow: 0 20px 60px -20px var(--portal-glow);
 }
 
-/* ====== PORTAL VARIANTS ====== */
+/* PORTAL VARIANTS */
 .portal--cyber {
   --portal-color: var(--cyan);
   --portal-glow: var(--cyan-dim);
@@ -80,7 +80,7 @@
   --portal-glow: var(--magenta-dim);
 }
 
-/* ====== PORTAL CONTENT ====== */
+/* PORTAL CONTENT */
 .portal-icon {
   width: 48px;
   height: 48px;

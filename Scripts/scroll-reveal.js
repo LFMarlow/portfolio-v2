@@ -1,11 +1,6 @@
-// ============================================================
-// Scroll Reveal — Animate sections on scroll into view
-// ============================================================
-
 (function () {
   'use strict';
 
-  // Elements to animate
   var revealTargets = [
     '.section__header',
     '.project-card',
@@ -26,7 +21,6 @@
     });
   });
 
-  // Stagger delay per group
   function applyStagger() {
     var groups = {};
 
@@ -46,7 +40,6 @@
 
   applyStagger();
 
-  // Intersection Observer
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -65,7 +58,7 @@
       observer.observe(el);
     });
   } else {
-    // Fallback: just show everything
+    //Fallback: just show everything
     allElements.forEach(function (el) {
       el.style.opacity = '1';
       el.style.transform = 'translateY(0)';

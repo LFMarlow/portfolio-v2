@@ -1,0 +1,70 @@
+/* APPROACH SECTION */
+.approach-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.approach-card {
+  background: rgba(10, 10, 15, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  padding: 28px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.approach-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 1px;
+  background: var(--magenta);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.approach-card:hover::before {
+  opacity: 0.5;
+  width: 100%;
+}
+
+.approach-card:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.approach-card__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--magenta);
+  margin-bottom: 18px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.approach-card:hover .approach-card__icon { opacity: 0.8; }
+
+.approach-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.approach-card__title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.approach-card__desc {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}

@@ -1,4 +1,4 @@
-/* ====== SECTION GENERIC ====== */
+/* SECTION GENERIC */
 .section {
   position: relative;
   z-index: 2;
@@ -38,7 +38,7 @@
   line-height: 1.6;
 }
 
-/* ====== ARCHITECTURE DIAGRAM ====== */
+/* ARCHITECTURE DIAGRAM */
 .arch-container {
   position: relative;
   width: 100%;
@@ -68,7 +68,7 @@
   filter: url(#glow);
 }
 
-/* ====== TOOLTIP ====== */
+/* TOOLTIP */
 .arch-tooltip {
   position: absolute;
   top: 0;

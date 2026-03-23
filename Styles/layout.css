@@ -1,4 +1,4 @@
-/* ====== MAIN CONTENT WRAPPER ====== */
+/* MAIN CONTENT WRAPPER */
 .content {
   position: relative;
   z-index: 2;
@@ -10,7 +10,7 @@
   padding: 40px 20px;
 }
 
-/* ====== BOTTOM LINKS ====== */
+/* BOTTOM LINKS */
 .bottom-links {
   margin-top: 80px;
   display: flex;
@@ -44,7 +44,7 @@
 
 .bottom-links a:hover::after { width: 100%; }
 
-/* ====== STATUS BAR ====== */
+/* STATUS BAR */
 .status-bar {
   position: fixed;
   bottom: 28px;

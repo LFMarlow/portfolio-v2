@@ -53,6 +53,16 @@
   color: var(--green);
 }
 
+.header__tagline {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  max-width: 480px;
+  margin: 18px auto 0;
+  letter-spacing: 0.5px;
+}
+
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

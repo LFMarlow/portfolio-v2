@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cybersécurité & Infrastructure — Lab Proxmox, pfSense, Wazuh SIEM, Terraform, hardening Lynis. Portfolio Thomas Lesage.">
+  <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
   <title>Cyber & Infrastructure Thomas Lesage</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Styles/variables.css">
@@ -86,7 +88,7 @@
       <article class="project-card" data-accent="purple">
         <div class="project-card__number">02</div>
         <h3 class="project-card__title">Terraform Automation</h3>
-        <p class="project-card__desc">Provisioning automatisé de VMs LAMP via Terraform &mdash; full clone depuis template Debian (ID 9000), nommage dynamique, configuration Nginx upstream auto sur le reverse proxy. Versionné sur GitHub.</p>
+        <p class="project-card__desc">Provisioning automatisé de VMs LAMP via Terraform &mdash; full clone depuis template Debian, nommage dynamique, configuration Nginx upstream auto sur le reverse proxy. Versionné sur GitHub.</p>
         <div class="project-card__tags"><span>Terraform</span><span>Proxmox API</span><span>Nginx</span><span>Git</span></div>
         <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
       </article>
@@ -94,7 +96,7 @@
       <article class="project-card" data-accent="green">
         <div class="project-card__number">03</div>
         <h3 class="project-card__title">Bastion Guacamole</h3>
-        <p class="project-card__desc">Point d'accès unique via Apache Guacamole (VM 110). Compilation custom sur Debian 13, Tomcat 9, Eclipse Temurin JDK 17, MariaDB backend. Résolution du bug proxy_hostname/proxy_port.</p>
+        <p class="project-card__desc">Point d'accès unique via Apache Guacamole. Compilation custom sur Debian 13, Tomcat 9, Eclipse Temurin JDK 17, MariaDB backend. Résolution du bug proxy_hostname/proxy_port.</p>
         <div class="project-card__tags"><span>Guacamole</span><span>Tomcat 9</span><span>SSH</span><span>RDP</span></div>
         <div class="project-card__status"><span class="status-indicator status-indicator--live"></span> En production</div>
       </article>
@@ -102,7 +104,7 @@
       <article class="project-card" data-accent="cyan">
         <div class="project-card__number">04</div>
         <h3 class="project-card__title">Hardening Lynis</h3>
-        <p class="project-card__desc">Score Lynis de 65 &rarr; 82 sur le bastion. SSH hardening, auditd, rkhunter, fail2ban, libpam-pwquality, paramètres sysctl sécurisés, mot de passe GRUB, politiques de mots de passe.</p>
+        <p class="project-card__desc">SSH hardening, auditd, rkhunter, fail2ban, libpam-pwquality, paramètres sysctl sécurisés, mot de passe GRUB, politiques de mots de passe.</p>
         <div class="project-card__tags"><span>Lynis</span><span>fail2ban</span><span>auditd</span><span>sysctl</span></div>
         <div class="project-card__status"><span class="status-indicator status-indicator--complete"></span> Score 82/100</div>
       </article>
@@ -200,7 +202,7 @@
         <div class="timeline__date">Phase 4</div>
         <div class="timeline__content">
           <h3>Bastion &amp; Hardening</h3>
-          <p>Apache Guacamole comme bastion SSH/RDP centralisé. Hardening Lynis (65&rarr;82), auditd, fail2ban, politiques SSH, snapshots systématiques.</p>
+          <p>Apache Guacamole comme bastion SSH/RDP centralisé. Hardening, Lynis, auditd, fail2ban, politiques SSH, snapshots systématiques.</p>
         </div>
       </div>
 

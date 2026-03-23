@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="À propos de Thomas Lesage. Parcours, formation EPSI, contact et CV.">
+  <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
+  <title>À propos Thomas Lesage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/variables.css">
+  <link rel="stylesheet" href="Styles/base.css">
+  <link rel="stylesheet" href="Styles/overlays.css">
+  <link rel="stylesheet" href="Styles/sections.css">
+  <link rel="stylesheet" href="Styles/About/about.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+  <div class="scanlines"></div>
+
+  <nav class="about-nav">
+    <a href="index.html" class="nav-back" aria-label="Retour au hub">
+      <span class="nav-arrow" aria-hidden="true">&larr;</span>
+      <span>Hub</span>
+    </a>
+    <div class="nav-title">
+      <span class="nav-dot"></span>
+      À propos
+    </div>
+    <div class="nav-spacer"></div>
+  </nav>
+
+  <section class="about-hero">
+    <div class="about-hero__badge">À propos</div>
+    <h1 class="about-hero__title">Thomas<br>Lesage</h1>
+    <p class="about-hero__subtitle">
+      En recherche d'emploi, passionné d'informatique depuis toujours,
+      autodidacte, curieux, et touche-à-tout.
+    </p>
+  </section>
+
+  <section class="section" id="parcours">
+    <div class="section__header">
+      <span class="section__number">01</span>
+      <h2 class="section__title">Parcours</h2>
+      <p class="section__desc">Autodidacte et Parcours.</p>
+    </div>
+
+    <div class="about-cards">
+      <div class="about-card">
+        <div class="about-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <h3 class="about-card__title">Formation</h3>
+        <p class="about-card__desc">
+          Formation ingénierie à l'EPSI, spécialisé en
+          cybersécurité et administration système. Parcours précédent en
+          développement web avec des compétences en front-end et back-end.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7v5c0 7.5 4.5 11.5 10 14 5.5-2.5 10-6.5 10-14V7L12 2z"/>
+          </svg>
+        </div>
+        <h3 class="about-card__title">Cybersécurité</h3>
+        <p class="about-card__desc">
+          Construction d'un lab complet sur bare-metal OVH : Proxmox,
+          pfSense, Wazuh SIEM, Suricata IDS, hardening Lynis, Terraform.
+          Une infrastructure de 16+ VMs segmentée en VLANs.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3 class="about-card__title">Développement</h3>
+        <p class="about-card__desc">
+          Autodidacte depuis très jeune, j'ai exploré divers Langages avant
+          de me former professionnellement. Aujourd'hui je développe principalement en
+          C#, PHP, ASP.NET, et Unity pour le game dev.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 3h12l4 6-10 13L2 9z"/>
+          </svg>
+        </div>
+        <h3 class="about-card__title">Game Dev</h3>
+        <p class="about-card__desc">
+          Développement de Crown of Echoes, un RPG Top-Down 2D sur Unity
+          inspiré d'Alundra. Systèmes de combat, dialogues, cinématiques
+          in-game et tilemap. Un projet passion en cours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section__header">
+      <span class="section__number">02</span>
+      <h2 class="section__title">Contact</h2>
+      <p class="section__desc">Un projet, une question, ou juste envie de discuter.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3 class="contact-block__title">Email</h3>
+        <a href="mailto:thomas59.lesage@gmail.com" class="contact-block__link" aria-label="Envoyer un email">
+          thomas59.lesage@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-block">
+        <h3 class="contact-block__title">GitHub</h3>
+        <a href="https://github.com/LFMarlow" target="_blank" rel="noopener" class="contact-block__link" aria-label="Profil GitHub">
+          github.com/LFMarlow
+        </a>
+      </div>
+
+      <div class="contact-block">
+        <h3 class="contact-block__title">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/thomas-lesage-147330116/" target="_blank" rel="noopener" class="contact-block__link" aria-label="Profil LinkedIn">
+          linkedin.com/in/thomas-lesage
+        </a>
+      </div>
+
+      <div class="contact-block">
+        <h3 class="contact-block__title">CV</h3>
+        <a href="Assets/Thomas_Lesage.pdf" download class="contact-block__link contact-block__link--download">
+          Télécharger mon CV <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="about-footer">
+    <a href="index.html" class="footer-link">&larr; Retour au Hub</a>
+    <span class="footer-copy">&copy; 2026 Thomas Lesage</span>
+  </footer>
+
+  <script src="Scripts/scroll-reveal.js"></script>
+</body>
+</html>

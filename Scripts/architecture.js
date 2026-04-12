@@ -143,11 +143,11 @@
 
   var dmzW = 280, dmzH = 140;
   drawVlanBox(dmzCX - dmzW / 2, vlansTop, dmzW, dmzH,
-    C.cyan, 'VLAN DMZ / ADMIN', '192.168.40.0/24');
+    C.cyan, 'VLAN DMZ / ADMIN');
 
   var srvW = 280, srvH = 310;
   drawVlanBox(srvCX - srvW / 2, vlansTop, srvW, srvH,
-    C.magenta, 'VLAN SERVER', '192.168.30.0/24');
+    C.magenta, 'VLAN SERVER');
 
   var lanW = 280, lanH = 140;
   drawVlanBox(lanCX - lanW / 2, vlansTop, lanW, lanH,
